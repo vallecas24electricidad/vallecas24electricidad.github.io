@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Electricista Urgente en Vallecas 24h (fin de semana) | Vallecas 24 Electricidad</title>
+  <meta name="description" content="Electricista autorizado en Vallecas. Servicio 24h solo en fin de semana (vie 15:00–dom). Presupuesto claro y desplazamiento rápido. Prueba de demanda: deja tu aviso y te llamamos al momento." />
+  <meta property="og:title" content="Electricista Urgente en Vallecas 24h (fin de semana)" />
+  <meta property="og:description" content="Averías eléctricas, sin luz, diferenciales, cortocircuitos. 24h en fin de semana en Vallecas y alrededores." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://dummyimage.com/1200x630/111827/ffffff&text=Vallecas+24+Electricidad" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#0b1220; --card:#0f172a; --text:#e2e8f0; --muted:#94a3b8; --brand:#0ea5e9; --ok:#22c55e; --warn:#f59e0b; --err:#ef4444; }
+    *{box-sizing:border-box}
+    html,body{margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif; color:var(--text); background:linear-gradient(180deg,#0b1220 0%,#111827 100%);} 
+    a{color:var(--brand); text-decoration:none}
+    .wrap{max-width:1080px; margin:0 auto; padding:clamp(12px,2.2vw,28px)}
+    header{position:sticky; top:0; backdrop-filter:saturate(180%) blur(8px); background:rgba(11,18,32,.72); border-bottom:1px solid rgba(255,255,255,.06); z-index:50}
+    header .bar{display:flex; align-items:center; justify-content:space-between}
+    .logo{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.4px}
+    .cta-row{display:flex; gap:10px; flex-wrap:wrap}
+    .btn{display:inline-flex; align-items:center; gap:10px; padding:12px 16px; border-radius:12px; border:1px solid rgba(255,255,255,.12); background:#0f172a; color:#e2e8f0; font-weight:600}
+    .btn.primary{background:linear-gradient(135deg,var(--brand),#38bdf8); color:#001018; border:none}
+    .btn.whatsapp{background:#1f2937;}
+    .btn.small{padding:8px 12px; border-radius:10px}
+    .hero{display:grid; grid-template-columns:1.1fr .9fr; gap:28px; align-items:start; padding-top:18px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,.35)}
+    .card .pad{padding:24px}
+    h1{font-size:clamp(28px,3.6vw,44px); line-height:1.05; margin:8px 0 10px}
+    .kickers{display:flex; gap:10px; flex-wrap:wrap; margin:8px 0 16px}
+    .kicker{font-size:12px; text-transform:uppercase; letter-spacing:.15em; color:#a5b4fc; background:#1f253a; border:1px solid rgba(165,180,252,.25); padding:6px 8px; border-radius:999px}
+    .lead{color:var(--muted); font-size:clamp(14px,1.6vw,17px)}
+    .badges{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
+    .badge{font-size:12px; background:#0b1220; border:1px dashed rgba(255,255,255,.14); padding:8px 10px; border-radius:10px}
+    form{display:grid; gap:12px}
+    label{font-size:13px; color:#cbd5e1}
+    input, textarea, select{width:100%; padding:12px 14px; background:#0b1220; color:#e2e8f0; border:1px solid rgba(255,255,255,.14); border-radius:12px}
+    input::placeholder,textarea::placeholder{color:#9aa7b8}
+    .grid{display:grid; gap:14px}
+    .grid.two{grid-template-columns:1fr 1fr}
+    .grid.three{grid-template-columns:repeat(3,1fr)}
+    .section{margin-top:36px}
+    h2{font-size:clamp(22px,2.6vw,30px); margin:10px 0 8px}
+    ul.clean{list-style:none; padding:0; margin:0; display:grid; gap:10px}
+    .li{display:flex; align-items:flex-start; gap:10px}
+    .li .dot{width:8px; height:8px; border-radius:50%; margin-top:8px; background:linear-gradient(135deg,#22c55e,#86efac)}
+    .price{font-size:32px; font-weight:800}
+    .muted{color:var(--muted)}
+    footer{margin-top:44px; padding:24px 0; color:#9aa7b8; border-top:1px solid rgba(255,255,255,.08)}
+    .floating{position:fixed; right:16px; bottom:16px; display:flex; flex-direction:column; gap:8px; z-index:60}
+    .floating a{box-shadow:0 10px 24px rgba(14,165,233,.35)}
+    html{scroll-behavior:smooth}
+    #precios{scroll-margin-top:90px}
+    .hint{font-size:12px; color:#9aa7b8}
+    .error{color:#fecaca}
+    .ok{color:#bbf7d0}
+    @media (max-width: 900px){ 
+      .hero{grid-template-columns:1fr} 
+      .grid.two,.grid.three{grid-template-columns:1fr} 
+      body{padding-bottom:88px}
+    }
+  </style>
+
+  <!-- Schema: LocalBusiness + FAQ for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Vallecas 24 Electricidad",
+    "image": "https://dummyimage.com/800x450/111827/ffffff&text=Vallecas+24+Electricidad",
+    "telephone": "+34679263177",
+    "url": "https://vallecas24electricidad.test",
+    "areaServed": {"@type":"Place","name":"Vallecas, Puente de Vallecas, Madrid"},
+    "priceRange": "€€",
+    "openingHoursSpecification":[
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"15:00","closes":"23:59"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"00:00","closes":"23:59"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"00:00","closes":"23:59"}
+    ],
+    "sameAs": []
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"¿Cuánto tardáis en llegar?","acceptedAnswer":{"@type":"Answer","text":"Normalmente 30–60 minutos dentro de Vallecas, según tráfico y franja horaria."}},
+      {"@type":"Question","name":"¿Cuánto cuesta una urgencia?","acceptedAnswer":{"@type":"Answer","text":"Diagnóstico desde 39€ + desplazamiento. Te confirmamos el precio cerrado antes de intervenir."}},
+      {"@type":"Question","name":"¿Trabajáis por la noche?","acceptedAnswer":{"@type":"Answer","text":"Sí, ofrecemos 24h durante el fin de semana. La nocturnidad puede tener suplemento."}},
+      {"@type":"Question","name":"¿Dais factura?","acceptedAnswer":{"@type":"Answer","text":"Sí, factura con IVA y garantía legal."}}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="wrap bar">
+      <div class="logo" aria-label="Vallecas 24 Electricidad">
+        <!-- Logo inline SVG -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="520" height="140" viewBox="0 0 260 40" role="img" aria-label="Vallecas 24 Electricidad">
+          <defs><linearGradient id="glogo" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0ea5e9"/><stop offset="1" stop-color="#38bdf8"/></linearGradient></defs>
+          <g transform="translate(0,0)"><rect x="2" y="2" width="36" height="36" rx="10" fill="url(#glogo)"/><path d="M22 6l-8 12h6l-2 14 10-16h-6l0-10z" fill="#001018"/></g>
+          <text x="48" y="22" style="font:800 22px Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; fill:#e2e8f0">Vallecas</text>
+          <text x="138" y="22" style="font:800 22px Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; fill:#0ea5e9">24</text>
+          <text x="48" y="35" style="font:600 11px Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; fill:#94a3b8; letter-spacing:.06em">ELECTRICIDAD</text>
+        </svg>
+      </div>
+      <div class="cta-row">
+        <a class="btn small" href="tel:+34679263177" aria-label="Llamar al +34 679 26 31 77">📞 Llamar: +34 679 26 31 77</a>
+        <a class="btn small whatsapp" href="https://wa.me/34679263177?text=Hola%2C+tengo+una+aver%C3%ADa+el%C3%A9ctrica+en+Vallecas" rel="noopener">🟢 WhatsApp</a>
+        <a class="btn small" href="#precios">💶 Tarifas</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="card">
+        <div class="pad">
+          <div class="kickers">
+            <span class="kicker">24h fin de semana</span>
+            <span class="kicker">Servicio local</span>
+            <span class="kicker">Factura y garantía</span>
+          </div>
+          <h1>Electricista urgente en Vallecas <span style="color:var(--brand)">24h (fin de semana)</span></h1>
+          <p class="lead">Sin luz, diferencial que dispara, rotura de neutro o cortocircuitos. Acudimos rápido y te damos <strong>precio cerrado</strong> antes de empezar. Deja tu aviso y te llamamos al momento.</p>
+          <div class="cta-row" style="margin:14px 0 4px">
+            <a class="btn primary" href="tel:+34679263177" aria-label="Llamar al +34 679 26 31 77">📞 Llamar ahora: +34 679 26 31 77</a>
+            <a class="btn whatsapp" href="https://wa.me/34679263177?text=Hola%2C+tengo+una+aver%C3%ADa+el%C3%A9ctrica+en+Vallecas" rel="noopener">🟢 WhatsApp inmediato</a>
+          </div>
+          <div class="badges">
+            <span class="badge">⏱️ Llegada estimada 30–60 min</span>
+            <span class="badge">🧾 Factura con IVA</span>
+            <span class="badge">🧰 Materiales de calidad</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="pad">
+          <h2>Deja tu aviso</h2>
+          <p class="muted">Te devolvemos la llamada para confirmar precio y llegada.</p>
+
+          <!-- FORMULARIO COMPLETO (AJAX + Validación + Anti-spam) -->
+          <form id="lead" action="https://formspree.io/f/xldwydgg" method="POST" novalidate>
+            <div class="grid two">
+              <div>
+                <label for="nombre">Nombre</label>
+                <input id="nombre" name="nombre" placeholder="Tu nombre" autocomplete="name" required />
+              </div>
+              <div>
+                <label for="telefono">Móvil</label>
+                <input id="telefono" name="telefono" type="tel" inputmode="tel" placeholder="Ej. 679 263 177"
+                  pattern="^(\+34|0034|34)?\s?\d{3}[\s]?\d{3}[\s]?\d{3}$" autocomplete="tel" required />
+                <div class="hint">Formato España: 9 dígitos (se admite +34/0034).</div>
+              </div>
+            </div>
+
+            <div class="grid two">
+              <div>
+                <label for="zona">Zona (barrio/calle)</label>
+                <input id="zona" name="zona" placeholder="Ej. Puente de Vallecas, C/ Monte Perdido" autocomplete="address-level2" />
+              </div>
+              <div>
+                <label for="urgencia">¿Urgente?</label>
+                <select id="urgencia" name="urgencia" required>
+                  <option value="" selected disabled>Selecciona...</option>
+                  <option>Ahora</option>
+                  <option>Hoy</option>
+                  <option>Esta semana</option>
+                </select>
+              </div>
+            </div>
+            <div class="grid two">
+              <div>
+                <label for="tipo">Tipo de incidencia</label>
+                <select id="tipo" name="tipo">
+                  <option>Sin luz</option>
+                  <option>Diferencial dispara</option>
+                  <option>Cortocircuito</option>
+                  <option>Olor a quemado / Calentamiento</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+              <div>
+                <label for="email">Email (opcional)</label>
+                <input id="email" name="email" type="email" placeholder="tu@correo.com" autocomplete="email" />
+              </div>
+            </div>
+
+            <div>
+              <label for="mensaje">Describe el problema</label>
+              <textarea id="mensaje" name="mensaje" rows="4" placeholder="Sin luz en salón, el diferencial salta..." required></textarea>
+            </div>
+
+            <!-- RGPD -->
+            <div>
+              <label style="display:flex; gap:10px; align-items:flex-start">
+                <input id="rgpd" name="rgpd" type="checkbox" required style="width:auto; margin-top:3px" />
+                <span>Acepto el tratamiento de mis datos para gestionar este aviso. <a href="#privacidad">Política de privacidad</a>.</span>
+              </label>
+            </div>
+
+            <!-- Anti-spam -->
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+            <!-- Campos ocultos útiles -->
+            <input type="hidden" name="origen" id="origen" value="direct" />
+            <input type="hidden" name="page_url" id="page_url" />
+            <input type="hidden" name="utm_source" id="utm_source" />
+            <input type="hidden" name="utm_campaign" id="utm_campaign" />
+            <input type="hidden" name="submitted_at" id="submitted_at" />
+
+            <!-- Botón + estado -->
+            <button id="sendBtn" class="btn primary" type="submit" aria-live="polite">📨 Enviar aviso</button>
+            <p id="status_ok" class="ok" style="display:none; margin:6px 0 0">✅ Gracias. Hemos recibido tu aviso y te llamaremos en breve.</p>
+            <p id="status_err" class="error" style="display:none; margin:6px 0 0">⚠️ Ha ocurrido un problema al enviar. Por favor, llámanos o usa WhatsApp.</p>
+
+            <p class="hint">También puedes contactar por <a href="tel:+34679263177">teléfono</a> o <a href="https://wa.me/34679263177?text=Hola%2C+tengo+una+aver%C3%ADa+el%C3%A9ctrica+en+Vallecas" rel="noopener">WhatsApp</a>.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="grid three">
+        <div class="card"><div class="pad">
+          <h3>Urgencias Eléctricas</h3>
+          <ul class="clean">
+            <li class="li"><span class="dot"></span><span>Disparo de Diferenciales</span></li>
+            <li class="li"><span class="dot"></span><span>Sin luz parcial o total</span></li>
+            <li class="li"><span class="dot"></span><span>Cortocircuitos</span></li>
+            <li class="li"><span class="dot"></span><span>Rotura de Neutros</span></li>
+          </ul>
+        </div></div>
+        <div class="card"><div class="pad">
+          <h3>Soluciones y Auditorías</h3>
+          <ul class="clean">
+            <li class="li"><span class="dot"></span><span>Comprobación de sensibilidad y tiempos de disparo de diferenciales</span></li>
+            <li class="li"><span class="dot"></span><span>Medición de resistencia de puesta a tierra</span></li>
+            <li class="li"><span class="dot"></span><span>Verificación de potencia de ruptura de magnetotérmicos</span></li>
+            <li class="li"><span class="dot"></span><span>Comprobación del correcto aislamiento de cables</span></li>
+            <li class="li"><span class="dot"></span><span>Presupuestos sin <strong>coste</strong> para mejorar puntos deficientes de la instalación</span></li>
+          </ul>
+        </div></div>
+        <div class="card"><div class="pad">
+          <h3>Por qué elegirnos</h3>
+          <ul class="clean">
+            <li class="li"><span class="dot"></span><span>Servicio local en Vallecas</span></li>
+            <li class="li"><span class="dot"></span><span>Factura y garantía</span></li>
+            <li class="li"><span class="dot"></span><span>Respuesta 24h fin de semana</span></li>
+          </ul>
+        </div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card"><div class="pad">
+        <h2>Preguntas frecuentes</h2>
+        <details><summary>¿Cuánto tardáis en llegar?</summary><p class="muted">Normalmente 30–60 minutos dentro de Vallecas (depende de tráfico).</p></details>
+        <details><summary>¿Qué métodos de pago aceptáis?</summary><p class="muted">Tarjeta y efectivo. Emitimos factura con IVA.</p></details>
+        <details><summary>¿Trabajáis por la noche?</summary><p class="muted">Sí, ofrecemos 24h durante el fin de semana. La nocturnidad puede tener suplemento.</p></details>
+      </div></div>
+    </section>
+
+    <!-- PRECIOS -->
+    <section class="section" id="precios">
+      <div class="card"><div class="pad">
+        <h2>Tarifas mínimas (fin de semana)</h2>
+        <p class="muted">Los servicios se realizan sólo sábados y domingos de 08:00 a 21:00h (horario diurno) y de 21:00 a 08:00h (horario nocturno).</p>
+        <div style="overflow-x:auto">
+          <table style="width:100%; border-collapse:collapse; border:1px solid rgba(255,255,255,.12); border-radius:10px; overflow:hidden">
+            <thead>
+              <tr style="background:#1f253a; text-align:left">
+                <th style="padding:10px">Concepto</th>
+                <th style="padding:10px">Condición</th>
+                <th style="padding:10px">Precio mínimo</th>
+                <th style="padding:10px">Notas</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding:10px">Desplazamiento</td>
+                <td style="padding:10px">Siempre aplicable</td>
+                <td style="padding:10px"><strong>45€</strong></td>
+                <td style="padding:10px" class="muted">Se suma al servicio</td>
+              </tr>
+              <tr>
+                <td style="padding:10px">Reparación NO urgente</td>
+                <td style="padding:10px">Horario normal 08:00–21:00</td>
+                <td style="padding:10px"><strong>95€</strong></td>
+                <td style="padding:10px" class="muted">Mano de obra mínima</td>
+              </tr>
+              <tr>
+                <td style="padding:10px">Reparación URGENTE</td>
+                <td style="padding:10px">Horario normal 08:00–21:00</td>
+                <td style="padding:10px"><strong>140€</strong></td>
+                <td style="padding:10px" class="muted">Mano de obra mínima de urgencia</td>
+              </tr>
+              <td colspan="4" style="padding:10px; background:rgba(239,68,68,.1); color:#fecaca">
+                <strong>Regla nocturna:</strong> a partir de las 21:00 todo se considera urgente y los importes se multiplican x2 (desplazamiento y servicio).
+              </td>
+            </tbody>
+          </table>
+        </div>
+        <p class="muted" style="margin-top:10px">Ejemplo: reparación mínima urgente → 45€ + 140€ = <strong>185€</strong> (material aparte, IVA no incluido).</p>
+      </div></div>
+    </section>
+
+    <footer class="wrap" id="privacidad">
+      <div class="grid two">
+        <div>
+          <strong>Vallecas 24 Electricidad</strong><br/>
+          <small class="muted">Vallecas, Madrid · Tel: +34 679 26 31 77</small>
+        </div>
+        <div class="muted">
+          <small>© <span id="year"></span> Vallecas 24 Electricidad · Aviso legal simplificado · Política de privacidad</small>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Floating CTAs -->
+  <div class="floating">
+    <a class="btn primary" href="tel:+34679263177" aria-label="Llamar al +34 679 26 31 77">📞 Llamar: +34 679 26 31 77</a>
+    <a class="btn whatsapp" href="https://wa.me/34679263177?text=Hola%2C+tengo+una+aver%C3%ADa+el%C3%A9ctrica+en+Vallecas" rel="noopener">🟢 WhatsApp</a>
+  </div>
+
+  <script>
+    // Año dinámico
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // UTM / fuente de tráfico
+    const params = new URLSearchParams(window.location.search);
+    const src = params.get('src') || 'direct';
+    const origen = document.getElementById('origen');
+    if (origen) origen.value = src;
+    const setVal = (id, val) => { const el = document.getElementById(id); if(el) el.value = val; };
+    setVal('page_url', window.location.href);
+    setVal('utm_source', params.get('utm_source') || '');
+    setVal('utm_campaign', params.get('utm_campaign') || '');
+    setVal('submitted_at', new Date().toISOString());
+
+    // Validación + envío AJAX a Formspree
+    const form = document.getElementById('lead');
+    const sendBtn = document.getElementById('sendBtn');
+    const ok = document.getElementById('status_ok');
+    const err = document.getElementById('status_err');
+
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        ok.style.display = 'none';
+        err.style.display = 'none';
+
+        // Validación HTML5
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+        // Anti-bot simple: evitar envío en < 2s
+        const firstTs = form.dataset.firstTs || Date.now();
+        form.dataset.firstTs = firstTs;
+        if (Date.now() - firstTs < 2000) {
+          err.textContent = '⚠️ Espera un momento y vuelve a intentarlo.';
+          err.style.display = 'block';
+          return;
+        }
+
+        sendBtn.disabled = true;
+        sendBtn.textContent = 'Enviando...';
+
+        try {
+          const data = new FormData(form);
+          const resp = await fetch(form.action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+
+          if (resp.ok) {
+            ok.style.display = 'block';
+            form.reset();
+            // Restaurar origen/UTM tras reset
+            setVal('origen', src);
+            setVal('page_url', window.location.href);
+            setVal('utm_source', params.get('utm_source') || '');
+            setVal('utm_campaign', params.get('utm_campaign') || '');
+            setVal('submitted_at', new Date().toISOString());
+          } else {
+            const j = await resp.json().catch(()=>({}));
+            err.textContent = '⚠️ No se pudo enviar el formulario. ' + (j && j.error ? j.error : 'Llámanos o usa WhatsApp.');
+            err.style.display = 'block';
+          }
+        } catch (ex) {
+          err.textContent = '⚠️ Error de red. Por favor, llámanos o usa WhatsApp.';
+          err.style.display = '

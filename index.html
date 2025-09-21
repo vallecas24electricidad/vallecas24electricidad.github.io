@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Electricista Urgente en Vallecas 24h (fin de semana) | Vallecas 24 Electricidad</title>
-  <meta name="description" content="Electricista autorizado en Vallecas. Servicio 24h solo en fin de semana (vie 15:00–dom). Presupuesto claro y desplazamiento rápido. Prueba de demanda: deja tu aviso y te llamamos al momento." />
+  <meta name="description" content="Electricista autorizado en Vallecas. Servicio 24h solo en fin de semana (vie 15:00–dom). Presupuesto claro y desplazamiento rápido. Deja tu aviso y te llamamos al momento." />
   <meta name="google-site-verification" content="NKQHK62CYo-aqLMzngFh9ev231tF2Evaz7y_3leQR60" />
   <meta property="og:title" content="Electricista Urgente en Vallecas 24h (fin de semana)" />
   <meta property="og:description" content="Averías eléctricas, sin luz, diferenciales, cortocircuitos. 24h en fin de semana en Vallecas y alrededores." />
@@ -272,7 +272,7 @@
     <section class="section" id="precios">
       <div class="card"><div class="pad">
         <h2>Tarifas mínimas (fin de semana)</h2>
-        <p class="muted">Los servicios se realizan sólo sábados y domingos de 08:00 a 21:00h (horario diurno) y de 21:00 a 08:00h (horario nocturno).</p>
+        <p class="muted">Los servicios se realizan sólo <strong>viernes (desde 15:00)</strong>, <strong>sábados</strong> y <strong>domingos</strong>. Horario diurno 08:00–21:00h; horario nocturno 21:00–08:00h.</p>
         <div style="overflow-x:auto">
           <table style="width:100%; border-collapse:collapse; border:1px solid rgba(255,255,255,.12); border-radius:10px; overflow:hidden">
             <thead>
@@ -292,23 +292,25 @@
               </tr>
               <tr>
                 <td style="padding:10px">Reparación NO urgente</td>
-                <td style="padding:10px">Horario normal 08:00–21:00</td>
+                <td style="padding:10px">Horario diurno 08:00–21:00</td>
                 <td style="padding:10px"><strong>95€</strong></td>
                 <td style="padding:10px" class="muted">Mano de obra mínima</td>
               </tr>
               <tr>
                 <td style="padding:10px">Reparación URGENTE</td>
-                <td style="padding:10px">Horario normal 08:00–21:00</td>
+                <td style="padding:10px">Horario diurno 08:00–21:00</td>
                 <td style="padding:10px"><strong>140€</strong></td>
                 <td style="padding:10px" class="muted">Mano de obra mínima de urgencia</td>
               </tr>
-              <td colspan="4" style="padding:10px; background:rgba(239,68,68,.1); color:#fecaca">
-                <strong>Regla nocturna:</strong> a partir de las 21:00 todo se considera urgente y los importes se multiplican x2 (desplazamiento y servicio).
-              </td>
+              <tr>
+                <td colspan="4" style="padding:10px; background:rgba(239,68,68,.1); color:#fecaca">
+                  <strong>Regla nocturna:</strong> a partir de las 21:00 <u>todo</u> se considera urgente y los importes se multiplican x2 (desplazamiento y servicio).
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
-        <p class="muted" style="margin-top:10px">Ejemplo: reparación mínima urgente → 45€ + 140€ = <strong>185€</strong> (material aparte, IVA no incluido).</p>
+        <p class="muted" style="margin-top:10px">Ejemplo: reparación mínima urgente diurna → 45€ + 140€ = <strong>185€</strong> (material aparte, IVA no incluido).</p>
       </div></div>
     </section>
 
@@ -326,7 +328,7 @@
   </main>
 
   <!-- Floating CTAs -->
-  <div class="floating">
+  <div class="floating" aria-hidden="true">
     <a class="btn primary" href="tel:+34679263177" aria-label="Llamar al +34 679 26 31 77">📞 Llamar: +34 679 26 31 77</a>
     <a class="btn whatsapp" href="https://wa.me/34679263177?text=Hola%2C+tengo+una+aver%C3%ADa+el%C3%A9ctrica+en+Vallecas" rel="noopener">🟢 WhatsApp</a>
   </div>
@@ -373,6 +375,7 @@
         }
 
         sendBtn.disabled = true;
+        const prevLabel = sendBtn.textContent;
         sendBtn.textContent = 'Enviando...';
 
         try {
@@ -392,6 +395,8 @@
             setVal('utm_source', params.get('utm_source') || '');
             setVal('utm_campaign', params.get('utm_campaign') || '');
             setVal('submitted_at', new Date().toISOString());
+            // Enfocar mensaje OK para lectores de pantalla
+            ok.setAttribute('tabindex','-1'); ok.focus();
           } else {
             const j = await resp.json().catch(()=>({}));
             err.textContent = '⚠️ No se pudo enviar el formulario. ' + (j && j.error ? j.error : 'Llámanos o usa WhatsApp.');
@@ -399,7 +404,13 @@
           }
         } catch (ex) {
           err.textContent = '⚠️ Error de red. Por favor, llámanos o usa WhatsApp.';
-          err.style.display = '
-
-
-
+          err.style.display = 'block';
+        } finally {
+          sendBtn.disabled = false;
+          sendBtn.textContent = prevLabel || '📨 Enviar aviso';
+        }
+      }, { passive:false });
+    }
+  </script>
+</body>
+</html>
